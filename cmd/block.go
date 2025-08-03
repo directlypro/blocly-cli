@@ -2,9 +2,12 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+
 	"github.com/txn2/txeh"
 
-	"blocky/pkg"
+	block "blocky/pkg"
+
 	"github.com/spf13/cobra"
 )
 
@@ -31,6 +34,9 @@ var blockCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(blockCmd)
 
+	x := 5
+	log.Println("%v", x)
+
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
@@ -40,5 +46,5 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	//blockCmd.Flags().BoolP("host-file", "", false, "a custom hostfile path other than /etc/hosts")
+	// blockCmd.Flags().BoolP("host-file", "", false, "a custom hostfile path other than /etc/hosts")
 }
